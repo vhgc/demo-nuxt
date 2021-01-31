@@ -15,7 +15,8 @@ pipeline {
 
     stage('Ejecutar') {
       steps {
-        sh 'npm run dev'
+        echo 'Seccion de Test'
+        emailext(subject: 'Prueba de Test', body: 'Se creo un paso para hacer test de funcionamiento a la aplicación', to: 'vhgc.mx@gmail.com', from: 'vhgc.mx@gmail.com')
       }
     }
 
