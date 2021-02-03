@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            sh 'npm install'
+            sh 'echo "npm install esto se comento"'
           }
         }
 
