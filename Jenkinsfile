@@ -17,7 +17,7 @@ pipeline {
 
         stage('Notificacion') {
           steps {
-            slackSend(attachments: 'STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})', botUser: true, channel: 'notifica-jenkins', message: 'Inicio de Blue Ocean', notifyCommitters: true, teamDomain: 'devopstest-espacio', tokenCredentialId: 'dwu2sLpd9gVAE6CleIrRdPGA', username: 'Test-vhgc', blocks: '${env.SLACK_SEND_CHANNEL} Inicio', color: 'good')
+            slackSend(attachments: 'STARTED: Job ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})', botUser: true, channel: 'notifica-jenkins', message: 'Inicio de Blue Ocean', notifyCommitters: true, teamDomain: 'devopstest-espacio', username: 'Test-vhgc', blocks: '${env.SLACK_SEND_CHANNEL} Inicio', color: 'good', token: 'dwu2sLpd9gVAE6CleIrRdPGA')
           }
         }
 
